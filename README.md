@@ -1,6 +1,6 @@
 ## Technical stack
 
-Backend: plain php 7.0+ version, mysql as a database.
+Backend: plain php 7.0+ version, mysql as a database.<br>
 Frontend: bootstrap for markup data + vue.js for handle/request data
 
 ## Installation
