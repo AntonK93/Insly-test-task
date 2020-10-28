@@ -151,12 +151,12 @@ class Calculator {
      */
     private function calculateInstalmentValue($value) : float
     {
+        $instalmentValue = $value / $this->inputData['instalments_number'];
         $remainder = $value % $this->inputData['instalments_number'];
         if ($remainder == 0)
-            return $this->round($value/$this->inputData['instalments_number']);
+            return $this->round($instalmentValue);
 
-        return floor($value/$this->inputData['instalments_number'])
-            + $this->round($remainder/$this->inputData['instalments_number']);
+        return floor($instalmentValue) + $this->round($remainder / $this->inputData['instalments_number']);
     }
 
     /**
