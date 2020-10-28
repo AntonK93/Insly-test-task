@@ -12,7 +12,7 @@ CREATE TABLE test_db.users(
 	`Birthdate` DATE,
 	`ID code / SSN` VARCHAR(11),
 	`Is a current employee` TINYINT(1),
-	`Email` VARCHAR (100),
+	`Email` VARCHAR(100),
 	`Phone` VARCHAR(20),
 	`Address` VARCHAR(100)
 );
@@ -42,7 +42,7 @@ ADD FOREIGN KEY (`User_id`) REFERENCES users(`Id`);
 
 /* Create log triggers */
 CREATE TRIGGER test_db.after_users_insert
-    AFTER INSERT ON test_db.users 
+    AFTER INSERT ON test_db.users
     FOR EACH ROW
 INSERT INTO test_db.users_log
 SET Action = 'insert',
@@ -52,7 +52,7 @@ SET Action = 'insert',
     Time = NOW();
 
 CREATE TRIGGER test_db.after_users_update
-    AFTER UPDATE ON test_db.users 
+    AFTER UPDATE ON test_db.users
     FOR EACH ROW
 INSERT INTO test_db.users_log
 SET Action = 'update',
@@ -62,7 +62,7 @@ SET Action = 'update',
     Time = NOW();
 
 CREATE TRIGGER test_db.after_user_personal_info_insert
-    AFTER INSERT ON test_db.user_personal_info 
+    AFTER INSERT ON test_db.user_personal_info
     FOR EACH ROW
 INSERT INTO test_db.users_log
 SET Action = 'insert',
@@ -72,7 +72,7 @@ SET Action = 'insert',
     Time = NOW();
 
 CREATE TRIGGER test_db.after_user_personal_info_update
-    AFTER UPDATE ON test_db.user_personal_info 
+    AFTER UPDATE ON test_db.user_personal_info
     FOR EACH ROW
 INSERT INTO test_db.users_log
 SET Action = 'update',
