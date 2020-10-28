@@ -31,7 +31,7 @@ function getSecondTestResult()
     $instalmentsNumber = $_POST['instalmentsNumber'];
 
     if ($calculator = new Calculator()) {
-        if ($clientIpInfo = new FetchTimeZoneByIp($_SERVER['REMOTE_ADDR']))
+        if ($clientIpInfo = new FetchTimeZoneByIp($_SERVER["REMOTE_ADDR"]))
             if ($clientTimeZone = $clientIpInfo->getClientTimeZone())
                 if ($clientTimeZone != 'Undefined') {
                     $calculator->setClientTimeZone($clientTimeZone);

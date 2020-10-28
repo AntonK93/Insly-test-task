@@ -154,7 +154,7 @@ class Calculator {
     {
         $instalmentValue = $value / $this->inputData['instalments_number'];
         $remainder = $value % $this->inputData['instalments_number'];
-        // if we don not have remainder it means that the current number correctly divided by the value
+        // if we do not have remainder it means that the current number correctly divided by the value
         // and we do not need to take care about remainder
         if ($remainder == 0)
             return $this->round($instalmentValue);
