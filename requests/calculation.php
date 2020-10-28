@@ -1,6 +1,6 @@
 <?php
 
-require_once '../core/classes/calculator.class.php';
+require_once '../core/services/calculator.php';
 require_once '../core/services/fetchTimeZoneByIp.php';
 
 $type = isset($_POST['type']) ? $_POST['type'] : false;
