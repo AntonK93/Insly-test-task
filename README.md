@@ -11,3 +11,5 @@ and in case of accessing from local compture your remote_addr will be "::1"(or t
 to fetch timezone from this. Either you can just directly set your ip address for test into getSecondTestResult() function in calculation.php, into FetchTimeZoneByIp.<br>
 <br>
 After accessing site you will be able to check first two tests, the third one is in file db.sql under root project folder.
+
+Please take in mind that i did not use autoloader and components under vue.js, cause application is quite simple and has a few functions/requests.
