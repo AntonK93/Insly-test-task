@@ -127,9 +127,9 @@ class Calculator {
 
     /**
      * Return base price percent based on current date time
-     * @return int
+     * @return float
      */
-    private function getBasePricePercent() : int
+    private function getBasePricePercent() : float
     {
         $clientDateTime = new DateTime("now", $this->inputData['client_date_timezone']);
 
