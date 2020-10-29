@@ -4,50 +4,48 @@ Vue.component('second-test', {
         <h6 class="mt-2 mb-3">Test 2: Calculator</h6>
         <div class="d-flex justify-content-center">
             <div class="col-5">
-                <form v-on:submit.prevent="requestSecondTest">
-                    <label for="car-value">Estimated value of the car (100 - 100 000 EUR)</label>
-                    <div class="input-group mb-2">
-                        <input id="car-value"
-                               placeholder="Estimated value of the car"
-                               type="number"
-                               class="form-control"
-                               @change="checkEstimatedValue()"
-                               pattern="[0-9]+([\\.,][0-9]+)?"
-                               step="0.01"
-                               v-model="secondTestData.estimatedValue">
-                        <div class="input-group-append">
-                            <span class="input-group-text">EUR</span>
-                        </div>
+                <label for="car-value">Estimated value of the car (100 - 100 000 EUR)</label>
+                <div class="input-group mb-2">
+                    <input id="car-value"
+                           placeholder="Estimated value of the car"
+                           type="number"
+                           class="form-control"
+                           @change="checkEstimatedValue()"
+                           pattern="[0-9]+([\\.,][0-9]+)?"
+                           step="0.01"
+                           v-model="secondTestData.estimatedValue">
+                    <div class="input-group-append">
+                        <span class="input-group-text">EUR</span>
                     </div>
+                 </div>
 
-                    <label for="tax-percentage">Tax percentage (0 - 100%)</label>
-                    <div class="input-group mb-2">
-                        <input
-                            id="tax-percentage"
-                            type="number"
-                            placeholder="Tax percentage"
-                            pattern="[0-9]+([\\.,][0-9]+)?"
-                            @change="checkTaxAmount()"
-                            step="0.01"
-                            v-model="secondTestData.taxPercentage"
-                            class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text">%</span>
-                        </div>
+                <label for="tax-percentage">Tax percentage (0 - 100%)</label>
+                <div class="input-group mb-2">
+                    <input id="tax-percentage"
+                           type="number"
+                           placeholder="Tax percentage"
+                           pattern="[0-9]+([\\.,][0-9]+)?"
+                           @change="checkTaxAmount()"
+                           step="0.01"
+                           v-model="secondTestData.taxPercentage"
+                           class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">%</span>
                     </div>
+                </div>
 
-                    <label for="instalments-number">Number of instalments (count of payments 1 – 12)</label>
-                    <input
-                        id="instalments-number"
-                        placeholder="Number of instalments"
-                        type="number"
-                        @change="checkInstalments()"
-                        v-model="secondTestData.instalmentsNumber"
-                        class="form-control mb-2">
-                    <button class="btn btn-primary float-right mt-2" :disabled="isCalculateButtonDisabled()">
-                        Calculate
-                    </button>
-                </form>
+                <label for="instalments-number">Number of instalments (count of payments 1 – 12)</label>
+                <input id="instalments-number"
+                       placeholder="Number of instalments"
+                       type="number"
+                       @change="checkInstalments()"
+                       v-model="secondTestData.instalmentsNumber"
+                       class="form-control mb-2">
+                <button class="btn btn-primary float-right mt-2"
+                        :disabled="isCalculateButtonDisabled()"
+                        @click="requestSecondTest">
+                     Calculate
+                </button>
             </div>
         </div>
 
