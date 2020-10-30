@@ -14,11 +14,6 @@
     <script src="https://unpkg.com/axios@0.21.0/dist/axios.min.js"></script>
 </head>
 <body>
-<div id="app" class="container-fluid col-11 mt-2 mb-2">
-    <first-test></first-test>
-    <second-test></second-test>
-    <third-test></third-test>
-</div>
 <?php require_once("layout/vue.html") ?>
 </body>
 </html>
