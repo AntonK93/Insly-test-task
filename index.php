@@ -19,6 +19,6 @@
     <second-test></second-test>
     <third-test></third-test>
 </div>
-<?php require_once("js/vue.html") ?>
+<?php require_once("layout/vue.html") ?>
 </body>
 </html>
