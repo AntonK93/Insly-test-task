@@ -11,7 +11,7 @@ Vue.component('first-test', {
             </h6>
         </div>
     `,
-    data: function () {
+    data() {
         return {
             firstTestResult: '',
         }

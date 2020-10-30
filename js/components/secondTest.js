@@ -95,7 +95,7 @@ Vue.component('second-test', {
         </div>
     </div>
     `,
-    data: function () {
+    data() {
         return {
             secondTestData: {
                 estimatedValue: null,
